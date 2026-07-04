@@ -8,8 +8,9 @@ import { buttonVariants } from "@/components/ui/button";
 import { LieferandoButton } from "@/components/LieferandoButton";
 import { fadeUp, stagger } from "@/lib/animations";
 import { cn } from "@/lib/utils";
+import { asset } from "@/lib/asset";
 
-const HERO_IMAGE = "/images/hero-pizza.jpg";
+const HERO_IMAGE = asset("/images/hero-pizza.jpg");
 
 export function Hero() {
   return (

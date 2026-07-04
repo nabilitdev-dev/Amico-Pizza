@@ -22,6 +22,7 @@ import { AnimatedSection } from "@/components/AnimatedSection";
 import { FeatureCard } from "@/components/FeatureCard";
 import { MenuCard } from "@/components/MenuCard";
 import { CTA } from "@/components/CTA";
+import { asset } from "@/lib/asset";
 import { fadeUp, scaleIn, stagger } from "@/lib/animations";
 
 const features = [
@@ -161,7 +162,7 @@ export default function HomePage() {
               <MenuCard
                 key={favorite.item.id}
                 item={favorite.item}
-                image={favorite.image}
+                image={asset(favorite.image)}
                 priceLabel={favorite.priceLabel}
               />
             ))}
@@ -197,7 +198,7 @@ export default function HomePage() {
             <AnimatedSection variants={scaleIn} className="mt-10 hidden lg:block">
               <div className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-border">
                 <Image
-                  src="/images/teig.jpg"
+                  src={asset("/images/teig.jpg")}
                   alt="Frischer Pizzateig wird von Hand vorbereitet"
                   fill
                   sizes="(max-width: 1024px) 100vw, 40vw"
