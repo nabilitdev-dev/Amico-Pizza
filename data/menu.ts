@@ -1,0 +1,200 @@
+import type { MenuCategory, PizzaItem, SizeOption } from "@/types";
+
+export const pizzaSizes = ["Single", "Jumbo", "Family", "Party"] as const;
+
+export const pizzas: PizzaItem[] = [
+  { id: "pizzabrot", name: "Pizzabrot", prices: [5.75, 7.45, null, null] },
+  { id: "calzone", name: "Calzone Pizza", prices: [11.45, 17.2, null, null] },
+  { id: "margherita", name: "Pizza Margherita", prices: [8.0, 12.6, 19.5, 25.25] },
+  { id: "funghi", name: "Pizza Funghi", prices: [9.15, 13.75, 21.8, 27.55] },
+  { id: "prosciutto", name: "Pizza Prosciutto", prices: [9.15, 13.75, 21.8, 27.55] },
+  { id: "salami", name: "Pizza Salami", prices: [9.15, 13.75, 21.8, 27.55] },
+  { id: "hawaii", name: "Pizza Hawaii", prices: [10.3, 14.9, 24.1, 28.7] },
+  { id: "regina", name: "Pizza Regina", prices: [10.3, 14.9, 22.95, 28.7] },
+  { id: "casalinga", name: "Pizza Casalinga", prices: [11.45, 17.2, 25.25, 32.15] },
+  { id: "diabolo", name: "Pizza Diabolo", spicy: true, prices: [11.45, 17.2, 25.25, 32.15] },
+  { id: "americana", name: "Pizza Americana", prices: [11.45, 17.2, 25.25, 32.15] },
+  { id: "quattro-stagione", name: "Pizza Quattro-Stagione", prices: [11.45, 17.2, 25.25, 32.15] },
+  { id: "vegetarisch", name: "Pizza Vegetarisch", prices: [11.45, 17.2, 25.25, 32.15] },
+  { id: "chicken", name: "Pizza Chicken", prices: [11.45, 17.2, 25.25, 32.15] },
+  { id: "curry-chicken", name: "Pizza Curry-Chicken", prices: [11.45, 17.2, 25.25, 32.15] },
+  { id: "mozzarella", name: "Pizza Mozzarella", prices: [11.45, 17.2, 25.25, 32.15] },
+  { id: "quattro-formaggi", name: "Pizza Quattro-Formaggi", prices: [11.45, 17.2, 25.25, 32.15] },
+  { id: "sucuk", name: "Pizza Sucuk", prices: [11.45, 17.2, 25.25, 32.15] },
+  { id: "mexikana", name: "Pizza Mexikana", prices: [11.45, 17.2, 25.25, 32.15] },
+  { id: "salvatore", name: "Pizza Salvatore", prices: [11.45, 17.2, 25.25, 32.15] },
+  { id: "bbq-chicken", name: "Pizza BBQ-Chicken", prices: [11.45, 17.2, 25.25, 32.15] },
+  { id: "arizona", name: "Pizza Arizona", prices: [11.45, 17.2, 25.25, 32.15] },
+  { id: "holland-chicken", name: "Pizza Holland Chicken", prices: [11.45, 17.2, 25.25, 32.15] },
+  { id: "hollandaise", name: "Pizza Hollandaise", prices: [11.45, 17.2, 25.25, 32.15] },
+  { id: "tonno", name: "Pizza Tonno", prices: [11.45, 17.2, 25.25, 32.15] },
+  { id: "shrimps", name: "Pizza Shrimps", prices: [11.45, 17.2, 25.25, 32.15] },
+  { id: "capricciosa", name: "Pizza Capricciosa", prices: [11.45, 17.2, 25.25, 32.15] },
+  { id: "tex-mex", name: "Pizza Tex-Mex", spicy: true, prices: [11.45, 17.2, 25.25, 32.15] },
+  { id: "parma", name: "Pizza Parma", prices: [11.45, 18.35, 26.4, 34.45] },
+  { id: "wunsch", name: "Wunsch Pizza", description: "Mit Zutaten nach Wahl", prices: [12.6, 18.35, 26.4, 34.45] },
+  { id: "meeresfruechte", name: "Pizza Meeresfrüchte", prices: [12.6, 19.5, 26.4, 33.3] },
+  { id: "casablanca", name: "Pizza Casablanca", prices: [12.6, 18.35, 26.4, 32.15] },
+];
+
+const haagenDazsSizes: SizeOption[] = [
+  { label: "460 ml", price: 12.5 },
+  { label: "95 ml", price: 6.3 },
+];
+
+export const categories: MenuCategory[] = [
+  {
+    id: "salate",
+    title: "Salate",
+    items: [
+      { id: "gruener-salat", name: "Grüner Salat", price: 7.45 },
+      { id: "gurkensalat", name: "Gurkensalat", price: 7.45 },
+      { id: "tomatensalat", name: "Tomatensalat", price: 7.45 },
+      { id: "gemischter-salat", name: "Gemischter Salat", price: 9.2 },
+      { id: "griechischer-bauern-salat", name: "Griechischer Bauern Salat", price: 10.9 },
+      { id: "mozzarella-e-pomodoro", name: "Mozzarella e pomodoro", price: 12.05 },
+      { id: "nizza-salat", name: "Nizza Salat", price: 10.9 },
+      { id: "chef-salat", name: "Chef Salat", price: 10.9 },
+      { id: "fitness-salat", name: "Fitness Salat", price: 14.35 },
+      { id: "carbonara", name: "Carbonara", price: 11.45 },
+    ],
+  },
+  {
+    id: "pasta",
+    title: "Pasta",
+    items: [
+      { id: "bolognese", name: "Bolognese", price: 11.45 },
+      { id: "pomodoro", name: "Pomodoro", price: 11.45 },
+      { id: "al-formaggi", name: "Al Formaggi", price: 11.45 },
+      { id: "arrabiata", name: "Arrabiata", price: 11.45 },
+      { id: "aglio-olio", name: "Aglio Olio", price: 11.45 },
+      { id: "alla-panna", name: "Alla Panna", price: 11.45 },
+      { id: "chef-pasta", name: "Chef Pasta", price: 11.45 },
+      { id: "al-formaggi-2", name: "Al Formaggi", price: 11.45 },
+    ],
+  },
+  {
+    id: "ueberbacken",
+    title: "Überbacken",
+    items: [
+      { id: "lasagne-bolognese", name: "Lasagne Bolognese", price: 10.35 },
+      { id: "rigatoni-gorgonzola", name: "Rigatoni Gorgonzola", price: 10.35 },
+      { id: "rigatoni-al-forno", name: "Rigatoni al Forno", price: 10.35 },
+      { id: "rigatoni-hackfleisch", name: "Rigatoni Hackfleisch", price: 10.9 },
+      { id: "rigatoni-vegetarisch", name: "Rigatoni Vegetarisch", price: 10.35 },
+      { id: "tortellini-al-forno", name: "Tortellini al Forno", price: 10.35 },
+    ],
+  },
+  {
+    id: "burger",
+    title: "Burger",
+    items: [
+      { id: "hamburger", name: "Hamburger", price: 9.75 },
+      { id: "cheeseburger", name: "Cheeseburger", price: 10.9 },
+      { id: "new-york-burger", name: "New York Burger", price: 10.9 },
+      { id: "schwarzwald-burger", name: "Schwarzwald Burger", price: 10.9 },
+      { id: "texas-burger", name: "Texas Burger", price: 10.9 },
+      { id: "avocado-burger", name: "Avocado Burger", price: 12.05 },
+      { id: "blue-schinken-burger", name: "Blue Schinken Burger", price: 10.9 },
+      { id: "beach-burger", name: "Beach Burger", price: 10.9 },
+      { id: "amico-burger", name: "Amico Burger", price: 12.05 },
+      { id: "chickenburger", name: "Chickenburger", price: 8.6 },
+      { id: "bbq-chicken-burger", name: "BBQ-Chicken Burger", price: 9.75 },
+    ],
+  },
+  {
+    id: "schnitzel",
+    title: "Schnitzel",
+    items: [
+      { id: "haehnchenschnitzel", name: "Hähnchenschnitzel", price: 13.75 },
+      { id: "putenschnitzel", name: "Putenschnitzel", price: 13.75 },
+    ],
+  },
+  {
+    id: "fingerfood",
+    title: "Fingerfood",
+    items: [
+      {
+        id: "pommes-frites",
+        name: "Pommes frites",
+        sizes: [
+          { label: "Klein", price: 6.85 },
+          { label: "Groß", price: 8.0 },
+        ],
+      },
+      {
+        id: "country-wedges",
+        name: "Country Wedges",
+        sizes: [
+          { label: "Klein", price: 5.15 },
+          { label: "Groß", price: 7.45 },
+        ],
+      },
+      { id: "fruehlingsrollen", name: "Mini-Frühlingsrollen", description: "8 Stück", price: 7.45 },
+      { id: "kartoffeltaschen", name: "Kartoffeltaschen", description: "2 Stück", price: 6.9 },
+      { id: "crispy-chicken-finger", name: "Crispy Chicken Finger", description: "5 Stück", price: 8.05 },
+      { id: "chili-cheese-nuggets", name: "Chili-Cheese Nuggets", description: "6 Stück", price: 7.45 },
+      { id: "mozzarella-sticks", name: "Mozzarella Sticks", description: "6 Stück", price: 9.2 },
+      { id: "onion-rings", name: "Onion Rings", price: 8.05 },
+      {
+        id: "chicken-nuggets",
+        name: "Chicken Nuggets",
+        sizes: [
+          { label: "6 Stück", price: 6.9 },
+          { label: "12 Stück", price: 11.5 },
+          { label: "20 Stück", price: 17.25 },
+        ],
+      },
+      {
+        id: "buffalo-chicken-wings",
+        name: "Buffalo Chicken Wings",
+        sizes: [
+          { label: "8 Stück", price: 12.6 },
+          { label: "16 Stück", price: 19.5 },
+        ],
+      },
+      { id: "calamari-fritti", name: "Calamari fritti", price: 13.8 },
+      { id: "currywurst", name: "Currywurst", description: "2 Stück", price: 11.5 },
+    ],
+  },
+  {
+    id: "desserts",
+    title: "Desserts",
+    items: [
+      { id: "tiramisu", name: "Tiramisu", price: 6.3 },
+      { id: "blueberry-muffin", name: "Blueberry Muffin", price: 5.15 },
+      { id: "schoko-muffin", name: "Schoko Muffin", price: 5.15 },
+      { id: "mousse-au-chocolat", name: "Mousse au Chocolat", price: 5.15 },
+      { id: "hd-cookies-cream", name: "Häagen-Dazs Cookies & Cream", sizes: haagenDazsSizes },
+      { id: "hd-dulce-de-leche", name: "Häagen-Dazs Dulce de Leche", sizes: haagenDazsSizes },
+      { id: "hd-macadamia", name: "Häagen-Dazs Macadamia Nut Brittle", sizes: haagenDazsSizes },
+      { id: "hd-strawberry-cheesecake", name: "Häagen-Dazs Strawberry Cheesecake", sizes: haagenDazsSizes },
+      { id: "hd-vanilla-caramel-brownie", name: "Häagen-Dazs Vanilla Caramel Brownie", sizes: haagenDazsSizes },
+    ],
+  },
+  {
+    id: "getraenke",
+    title: "Getränke",
+    note: "Alle Getränke in der 1,0-l-Mehrwegflasche zzgl. Pfand, sofern nicht anders angegeben.",
+    items: [
+      { id: "sprite", name: "Sprite", description: "1,0 l", price: 4.45 },
+      { id: "coca-cola", name: "Coca-Cola", description: "1,0 l", price: 4.45 },
+      { id: "coca-cola-zero", name: "Coca-Cola Zero", description: "1,0 l", price: 4.45 },
+      { id: "mezzo-mix", name: "Mezzo Mix", description: "1,0 l", price: 4.45 },
+      { id: "fanta-orange", name: "Fanta Orange", description: "1,0 l", price: 4.45 },
+      { id: "adelholzener-still", name: "Adelholzener Stilles Wasser", description: "1,0 l", price: 4.45 },
+      { id: "adelholzener", name: "Adelholzener Wasser", description: "1,0 l", price: 4.45 },
+      { id: "lift-apfelschorle", name: "Lift Apfelschorle", description: "1,0 l", price: 4.45 },
+      { id: "wolfra-apfelsaft", name: "Wolfra Apfelsaft", description: "1,0 l", price: 6.3 },
+      { id: "wolfra-johannisbeersaft", name: "Wolfra Johannisbeersaft", description: "1,0 l", price: 6.3 },
+      { id: "wolfra-orangensaft", name: "Wolfra Orangensaft", description: "1,0 l", price: 6.3 },
+      { id: "wolfra-maracujasaft", name: "Wolfra Maracujasaft", description: "1,0 l", price: 6.3 },
+      { id: "wolfra-rhabarbersaft", name: "Wolfra Rhabarbersaft", description: "1,0 l", price: 6.3 },
+      { id: "original-spezi", name: "Original Spezi", description: "0,5 l", price: 3.15 },
+      { id: "red-bull", name: "Red Bull", description: "250 ml", price: 4.0 },
+    ],
+  },
+];
+
+export const menuItemCount =
+  pizzas.length + categories.reduce((sum, category) => sum + category.items.length, 0);

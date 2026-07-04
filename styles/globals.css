@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: #faf7f2;
+  --foreground: #211b16;
+  --card: #ffffff;
+  --card-foreground: #211b16;
+  --muted: #f0eae0;
+  --muted-foreground: #6f675e;
+  --border: #e6ddcf;
+  --input: #e6ddcf;
+  --primary: #d62828;
+  --primary-hover: #b91f1f;
+  --primary-foreground: #ffffff;
+  --primary-strong: #c81e1e;
+  --gold: #a87b2a;
+  --gold-soft: #f3e8d3;
+  --ring: #d62828;
+  --radius: 1rem;
+}
+
+.dark {
+  --background: #0d0a08;
+  --foreground: #f5efe6;
+  --card: #171210;
+  --card-foreground: #f5efe6;
+  --muted: #211a15;
+  --muted-foreground: #a89f93;
+  --border: #2b2219;
+  --input: #2b2219;
+  --primary: #d62828;
+  --primary-hover: #e73f3f;
+  --primary-foreground: #ffffff;
+  --primary-strong: #f26d6d;
+  --gold: #d9a04a;
+  --gold-soft: #2a2013;
+  --ring: #d9a04a;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-strong: var(--primary-strong);
+  --color-gold: var(--gold);
+  --color-gold-soft: var(--gold-soft);
+  --color-ring: var(--ring);
+  --font-sans: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-fraunces), Georgia, serif;
+  --radius-sm: calc(var(--radius) - 6px);
+  --radius-md: calc(var(--radius) - 3px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 14px);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+    outline-color: color-mix(in srgb, var(--ring) 50%, transparent);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+  }
+
+  ::selection {
+    background-color: color-mix(in srgb, var(--primary) 25%, transparent);
+  }
+}
+
+@utility no-scrollbar {
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
